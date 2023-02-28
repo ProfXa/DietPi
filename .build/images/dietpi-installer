@@ -17,7 +17,7 @@
 	# - G_RASPBIAN
 	#
 	# The following environment variables can be set to automate this script (adjust example values to your needs):
-	# - GITOWNER='MichaIng'			(optional, defaults to 'MichaIng')
+	# - GITOWNER='ProfXa'			(optional, defaults to 'ProfXa')
 	# - GITBRANCH='master'
 	# - IMAGE_CREATOR='Mr. Tux'
 	# - PREIMAGE_INFO='Some GNU/Linux'
@@ -45,7 +45,7 @@
 	# - Apply override LC_ALL and default LANG for current script
 	export LC_ALL='C.UTF-8' LANG='C.UTF-8'
 
-	# Set $PATH variable to include all expected default binary locations, since we don't know the current system setup: https://github.com/MichaIng/DietPi/issues/3206
+	# Set $PATH variable to include all expected default binary locations, since we don't know the current system setup: https://github.com/ProfXa/DietPi/issues/3206
 	export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 	# Mount all filesystems defined in /etc/fstab without "noauto" option: https://github.com/MichaIng/DietPi/issues/5174
@@ -79,7 +79,7 @@
 	#	Conflicting configs
 	rm -fv /etc/apt/apt.conf.d/*{recommends,armbian}*
 	# - Apply wanted APT configs: Overwritten by DietPi code archive
-	cat << '_EOF_' > /etc/apt/apt.conf.d/97dietpi # https://raw.githubusercontent.com/MichaIng/DietPi/dev/rootfs/etc/apt/apt.conf.d/97dietpi
+	cat << '_EOF_' > /etc/apt/apt.conf.d/97dietpi # https://raw.githubusercontent.com/ProfXa/DietPi/dev/rootfs/etc/apt/apt.conf.d/97dietpi
 APT::Install-Recommends "false";
 APT::Install-Suggests "false";
 APT::AutoRemove::RecommendsImportant "false";
@@ -121,7 +121,7 @@ _EOF_
 	unset -v aAPT_PREREQS
 
 	# Set Git owner
-	GITOWNER=${GITOWNER:-MichaIng}
+	GITOWNER=${GITOWNER:-ProfXa}
 
 	# Select Git branch
 	if [[ ! $GITBRANCH ]]
@@ -706,7 +706,7 @@ fi' /boot/boot.cmd
 			# NanoPi M3/T3/Fire3 (64-bit)
 			elif (( $G_HW_MODEL == 62 ))
 			then
-				G_EXEC curl -sSf 'https://raw.githubusercontent.com/MichaIng/DietPi/dev/.build/images/NanoPiM3/boot.cmd' -o /boot/boot.cmd
+				G_EXEC curl -sSf 'https://raw.githubusercontent.com/ProfXa/DietPi/dev/.build/images/NanoPiM3/boot.cmd' -o /boot/boot.cmd
 				G_EXEC sed -i '/overlay/d' /boot/dietpiEnv.txt
 				G_EXEC sed -i 's/ttyAML0/ttySAC0/' /boot/dietpiEnv.txt
 			fi
@@ -2224,7 +2224,7 @@ _EOF_
 		G_DIETPI-NOTIFY 0 'Completed, disk can now be saved to .img for later use, or, reboot system to start first run of DietPi.'
 
 		# shellcheck disable=SC2016
-		G_DIETPI-NOTIFY 0 'To create an .img file, you can "poweroff" and run the following command from the host/external DietPi system:\n\t- bash -c "$(curl -sSf https://raw.githubusercontent.com/MichaIng/DietPi/master/.build/images/dietpi-imager)"'
+		G_DIETPI-NOTIFY 0 'To create an .img file, you can "poweroff" and run the following command from the host/external DietPi system:\n\t- bash -c "$(curl -sSf https://raw.githubusercontent.com/ProfXa/DietPi/master/.build/images/dietpi-imager)"'
 
 	}
 
