@@ -46,7 +46,7 @@
 
 	# Git repo to update from
 	GITOWNER_TARGET=$(sed -n '/^[[:blank:]]*DEV_GITOWNER=/{s/^[^=]*=//p;q}' /boot/dietpi.txt)
-	GITOWNER_TARGET=${GITOWNER_TARGET:-MichaIng}
+	GITOWNER_TARGET=${GITOWNER_TARGET:-ProfXa}
 	GITBRANCH_TARGET=$(sed -n '/^[[:blank:]]*DEV_GITBRANCH=/{s/^[^=]*=//p;q}' /boot/dietpi.txt)
 	GITBRANCH_TARGET=${GITBRANCH_TARGET:-master}
 
