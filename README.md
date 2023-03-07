@@ -1,3 +1,7 @@
+Istruzioni per l'installazione della versione PREP
+https://dietpi.com/docs/hardware/#make-your-own-distribution
+
+
 <h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi logo" width="180" height="180" loading="lazy"></h1>
 <p align="center">
 	<b>Lightweight justice for your single-board computer!</b>
