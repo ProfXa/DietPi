@@ -1,5 +1,12 @@
-Istruzioni per l'installazione della versione PREP
-https://dietpi.com/docs/hardware/#make-your-own-distribution
+<p>Istruzioni per l'installazione della versione personalizzata PREP:</p>
+<p><a href="https://dietpi.com/docs/hardware/#make-your-own-distribution">https://dietpi.com/docs/hardware/#make-your-own-distribution</a></p>
+
+
+<pre><code>apt update</code></pre>
+<pre><code>apt install -y curl ca-certificates systemd-sysv</code></pre>
+<pre><code>bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/ProfXa/DietPi/master/.build/images/dietpi-installer')"
+</code></pre>
+
 
 
 <h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi logo" width="180" height="180" loading="lazy"></h1>
