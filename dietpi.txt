@@ -131,6 +131,11 @@ AUTO_SETUP_GLOBAL_PASSWORD=dietpi
 # - DietPi will automatically install all dependencies, like ALSA/X11 for desktops etc.
 # - E.g. the following (without the leading "#") will install the LXDE desktop automatically on first boot:
 #AUTO_SETUP_INSTALL_SOFTWARE_ID=23
+AUTO_SETUP_INSTALL_SOFTWARE_ID=16
+AUTO_SETUP_INSTALL_SOFTWARE_ID=25
+AUTO_SETUP_INSTALL_SOFTWARE_ID=28
+AUTO_SETUP_INSTALL_SOFTWARE_ID=96
+AUTO_SETUP_INSTALL_SOFTWARE_ID=132
 
 #------------------------------------------------------------------------------------------------------
 ##### Misc DietPi program settings #####
@@ -177,11 +182,11 @@ CONFIG_G_CHECK_URL_TIMEOUT=10
 CONFIG_G_CHECK_URL_ATTEMPTS=2
 # General connection and DNS testing
 # - IPv4 address to ping when checking network connectivity. Default: 9.9.9.9 (Quad9 DNS IP)
-CONFIG_CHECK_CONNECTION_IP=9.9.9.9
+CONFIG_CHECK_CONNECTION_IP=1.1.1.1
 # - IPv6 address to ping when checking network connectivity. Default: 2620:fe::fe (Quad9 DNS IP)
 CONFIG_CHECK_CONNECTION_IPV6=2620:fe::fe
 # - Domain to resolve when checking DNS resolver. Default: dns9.quad9.net (Quad9 DNS domain)
-CONFIG_CHECK_DNS_DOMAIN=dns9.quad9.net
+CONFIG_CHECK_DNS_DOMAIN=one.one.one.one
 
 # Daily check for DietPi updates: 0=disable | 1=enable
 # - Checks are done by downloading a file of only 7 bytes.
